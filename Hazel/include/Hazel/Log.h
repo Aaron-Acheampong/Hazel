@@ -1,9 +1,9 @@
 #pragma once
 
-#include <memory>
 
 #include "Hazel/Core.h"
 #include <spdlog/spdlog.h>
+#include <spdlog/fmt/ostr.h>
 
 namespace Hazel {
 
@@ -21,6 +21,8 @@ namespace Hazel {
 
 }
 
+
+
 // Core log macros
 #define HZ_CORE_TRACE(...)    ::Hazel::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define HZ_CORE_INFO(...)     ::Hazel::Log::GetCoreLogger()->info(__VA_ARGS__)
@@ -34,3 +36,4 @@ namespace Hazel {
 #define HZ_WARN(...)	      ::Hazel::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define HZ_ERROR(...)	      ::Hazel::Log::GetClientLogger()->error(__VA_ARGS__)
 #define HZ_FATAL(...)	      ::Hazel::Log::GetClientLogger()->fatal(__VA_ARGS__)
+
